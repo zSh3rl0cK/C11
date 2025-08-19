@@ -20,3 +20,4 @@ print("Maior média (coluna): ", matriz.mean(axis=0).max(), "\n")
 valores, contagens = np.unique(matriz, return_counts=True)
 print("Valores únicos: ", valores)
 print("Contagem de cada valor: ", contagens, "\n")
+
