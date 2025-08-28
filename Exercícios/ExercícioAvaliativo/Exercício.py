@@ -8,11 +8,11 @@ ds = np.loadtxt("paises.csv",
 print(f"{ds[0]} \n")
 
 # Questão 1: Mostrando apenas as colunas: País, região, população e area
-print(f"{ds[1:,:3]} \n")
+print(f"{ds[1:,:4]} \n")
 
 # Questão 2: Contando e mostrando os diferentes países
 unicos = np.unique(ds[1:, 1])
-print(f"Quantidade de paises: {len(unicos)} \n")
+print(f"Quantidade de regiões: {len(unicos)} \n")
 print(f"{np.unique(ds[1:, 1])} \n")
 
 # Questão 3: Mostrando a taxa média de alfabetização
