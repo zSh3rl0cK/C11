@@ -18,11 +18,11 @@ mtz = ds[1:, 2] # Matriz formada pelas linhas dos locais de cada missão
 print(f"Missões realizadas pelos EUA: {np.sum(np.char.find(mtz, 'USA') >= 0)} \n") # poderia usar apenas count tbm
 
 # Questão 4
-mtz = (ds[1:, 1] == "SpaceX")
+spacex = (ds[1:, 1] == "SpaceX")
 custo = ds[1:, 6].astype(float)
 
-max_custo = np.max(custo[mtz])  # valor máximo de custo
-mask_max = (custo == max_custo) & mtz  # missões da SpaceX que têm esse custo máximo
+max_custo = np.max(custo[spacex])  # valor máximo de custo
+mask_max = (custo == max_custo) & spacex  # missões da SpaceX que têm esse custo máximo
 
 print(f"As missões mais caras da empresa SpaceX custaram: {max_custo} milhões \n")
 for linha in ds[1:][mask_max]:

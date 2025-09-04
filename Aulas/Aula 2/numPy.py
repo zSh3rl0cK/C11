@@ -51,7 +51,7 @@ print(mtz, "\n")
 
 print("Contas dos meses: ", mtz.sum(axis=1)) # 1 significa linha e 0 coluna
 
-print("Conta de net total: ", mtz.sum(axis=0)[2], "\n")
+print("Conta de net total: ", mtz[2].sum(axis=0), "\n")
 
 # Broadcasting
 print(mtz/10, "\n")

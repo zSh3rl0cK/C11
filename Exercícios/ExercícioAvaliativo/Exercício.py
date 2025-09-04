@@ -23,11 +23,12 @@ paises = ds[1:,1]
 print(f"{len(paises[np.char.find(ds[1:,1], "NORTHERN AMERICA") >= 0])} paises da america do norte\n")
 
 # Questão 5: Qual país da america do sul e carib possuem maior renda per capita
-# paises = (ds[1:,1] == "LATIN AMER. & CARIB") tentativa nao funcional
-
+# paises = (ds[1:,1] == "LATIN AMER. & CARIB") tentativa nao funcional+
 paisesSAM = (np.char.find(ds[1:,1], "LATIN AMER. & CARIB") >= 0)
 renda =  ds[1:,8].astype(float)
 rendaMax = np.max(renda[paisesSAM])
+
+print(f"{ds[1:,0][paisesSAM][np.argmax(ds[1:,8].astype(float)[paisesSAM])]} \n")
 
 pais = (renda == rendaMax) & paisesSAM
 print(f"Renda max: {rendaMax} \n Pais com renda máxima: {ds[1:,0][pais]} \n")
